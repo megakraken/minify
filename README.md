@@ -12,5 +12,5 @@ I was so fed up with this that I put together this thing that packages [terser](
     # Invoke terser
     ./minify terser --help
   
-    # Invoke clean-clss
+    # Invoke clean-css
     ./minify cleancss --help

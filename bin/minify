@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+"use strict";
+
+if (process.argv.length < 3) {
+  console.log('minify.exe terser|cleancss <options>');
+} else {
+  let p = process.argv.splice(2, 1);
+  switch (p[0]) {
+    case 'terser':
+      run_terser();
+      break;
+    case 'cleancss':
+      run_cleancss();
+      break;
+  }
+}
+
+function run_terser() {
+  require("../node_modules/terser/bin/terser");
+}
+
+function run_cleancss() {
+  let cli = require('../node_modules/clean-css-cli/index');
+  return cli(process);
+}

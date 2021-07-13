@@ -1,0 +1,17 @@
+{
+  "name": "minify",
+  "version": "1.0.0",
+  "description": "terser and clean-css bundled as a single stand-alone executable for easy toolchain integration.",
+  "main": "index.js",
+  "scripts": {
+    "build": "pkg . --targets node12"
+  },
+  "author": "megakraken",
+  "dependencies": {
+    "clean-css-cli": "^5.3.0",
+    "terser": "^5.7.1"
+  },
+  "bin": {
+    "minify": "bin/minify"
+  }
+}
